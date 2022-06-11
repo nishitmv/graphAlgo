@@ -21,7 +21,10 @@ public class ValidTreeChecker {
 
         for(int i=0;i<edges.length;i++)
         {
-            union(edges[i][0], edges[i][1]);
+            if(isValid)
+                 union(edges[i][0], edges[i][1]);
+            else
+                break;
         }
 
         return count==1 && isValid;
