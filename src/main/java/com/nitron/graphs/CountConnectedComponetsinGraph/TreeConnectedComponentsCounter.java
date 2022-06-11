@@ -25,6 +25,7 @@ public class TreeConnectedComponentsCounter {
             union(edge[0], edge[1]);
         }
 
+        // Find Roots of all vertices, number of roots = number of components
         for(int i=0;i<n;i++)
         {
             rootSet.add(find(i));
