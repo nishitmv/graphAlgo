@@ -58,9 +58,7 @@ public class FindEarliestTimeStamp {
                 roots[rootY] = rootX;
                 heights[rootX]++;
             }
-
         }
-
     }
 
 }
