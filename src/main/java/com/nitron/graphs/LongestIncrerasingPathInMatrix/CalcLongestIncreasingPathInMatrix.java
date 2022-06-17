@@ -14,6 +14,7 @@ public class CalcLongestIncreasingPathInMatrix {
             for (int j = 0; j <=n; j++)
             {
                 memMatrix[i][j]   = calcLongestIncreasingPath(matrix, i, j, m-1, n-1);
+
             }
 
         for (int i = 0; i <=m; i++)
@@ -29,8 +30,9 @@ public class CalcLongestIncreasingPathInMatrix {
 
         if(i>m || j>n)
             return 0;
-        if(memMatrix[i][j]!=null)
+        if(memMatrix[i][j]!=null) {
             return memMatrix[i][j];
+        }
         int currVal = matrix[i][j];
 
         // 1 because you start from one element .
@@ -47,6 +49,6 @@ public class CalcLongestIncreasingPathInMatrix {
         if(i>0 && matrix[i-1][j]> currVal)
             bottomToTop = 1+calcLongestIncreasingPath(matrix, i-1, j, m, n);
 
-        return Math.max( Math.max(leftToRight, rightToLeft), Math.max(topToBottom, bottomToTop));
+        return memMatrix[i][j] = Math.max( Math.max(leftToRight, rightToLeft), Math.max(topToBottom, bottomToTop));
     }
 }
