@@ -29,7 +29,7 @@ public class Main {
                             {0,1,0,0},
                             {0,0,0,0}};
         Instant start = Instant.now();
-        System.out.println(new BinaryMatrixShortestPathFinder().findShortestPath(matrix1));
+        System.out.println(new BinaryMatrixShortestPathFinder().findShortestPath(matrix3));
         System.out.println(Duration.between(start, Instant.now()));
 
     }
