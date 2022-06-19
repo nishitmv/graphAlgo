@@ -27,7 +27,6 @@ public class NextRightPointerPopulator {
                     queue.add(current.right);
 
             }
-
         }
     }
 
